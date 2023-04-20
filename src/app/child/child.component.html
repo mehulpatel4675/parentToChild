@@ -1,0 +1,18 @@
+<p>Parent to Child</p>
+<p>{{ item }}</p>
+<p>{{ item2 }}</p>
+
+<ul *ngFor="let detail of varname">
+  <li>{{ detail.name }}</li>
+  <li>{{ detail.phone }}</li>
+  <li *ngFor="let add of detail.address">
+    {{ add.city }} {{ add.state }} {{ add.pincode }}</li>
+</ul>
+
+<!--
+<table *ngFor="let maindata of varname">
+  <tr>
+    <td>{{maindata.name}}</td>
+    <td>{{maindata.phone}}</td>
+  </tr>
+</table> -->
